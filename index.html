@@ -3,48 +3,34 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SBS컴퓨터아트학원 안산점 — 개강안내</title>
+<title>SBS컴퓨터아트학원 2팀 — 개강안내</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{
-  --pink:#e8608a;--pink-dim:#d04d78;--pink-light:#fff0f5;
-  --pink-border:#fad0de;--pink-mid:#f5b8ce;
-  --bg:#fdf5f8;--surface:#ffffff;
-  --text:#1a0a10;--text2:#7a4060;--text3:#c090a8;
-  --border:#f0e0e8;--radius:12px;--radius-sm:7px;
-}
+:root{--pink:#e8608a;--pink-dim:#d04d78;--pink-light:#fff0f5;--pink-border:#fad0de;--pink-mid:#f5b8ce;--bg:#fdf5f8;--surface:#fff;--text:#1a0a10;--text2:#7a4060;--text3:#c090a8;--border:#f0e0e8;--radius:10px;--radius-sm:6px;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;font-size:14px;}
-
-/* HEADER */
-.header{background:var(--pink);padding:0 24px;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(232,96,138,0.25);}
-.header-inner{max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px;}
+.header{background:var(--pink);padding:14px 24px 0;}
+.header-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;}
 .logo-title{font-size:17px;font-weight:900;color:#fff;letter-spacing:-0.4px;}
-.logo-sub{font-size:11px;color:rgba(255,255,255,0.75);margin-top:1px;}
-.search-box{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.35);border-radius:22px;padding:7px 16px 7px 12px;display:flex;align-items:center;gap:7px;}
-.search-box input{background:none;border:none;outline:none;font-family:'Noto Sans KR',sans-serif;font-size:13px;color:#fff;width:170px;}
-.search-box input::placeholder{color:rgba(255,255,255,0.65);}
-.settings-btn{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:var(--radius-sm);padding:7px 14px;font-size:12px;color:#fff;font-family:'Noto Sans KR',sans-serif;cursor:pointer;font-weight:600;}
-.settings-btn:hover{background:rgba(255,255,255,0.28);}
-
-/* ROOM BAR */
-.room-bar{background:var(--surface);border-bottom:1px solid var(--border);padding:9px 24px;overflow-x:auto;}
-.room-bar-inner{max-width:1280px;margin:0 auto;display:flex;gap:6px;}
-.room-chip{height:28px;padding:0 14px;border-radius:20px;border:1px solid var(--border);background:var(--surface);color:var(--text3);font-family:'Noto Sans KR',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
-.room-chip:hover{border-color:var(--pink);color:var(--pink);}
-.room-chip.active{background:var(--pink);color:#fff;border-color:var(--pink);}
-
-/* TABS */
-.tabs-wrap{background:var(--surface);border-bottom:2px solid var(--pink-border);}
-.tabs-inner{max-width:1280px;margin:0 auto;display:flex;align-items:stretch;padding:0 24px;}
-.tab-btn{display:flex;align-items:center;gap:6px;padding:12px 20px;font-family:'Noto Sans KR',sans-serif;font-size:13px;font-weight:600;color:var(--text3);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.15s;white-space:nowrap;}
-.tab-btn:hover{color:var(--pink);}
-.tab-btn.active{color:var(--pink);border-bottom-color:var(--pink);}
-.tab-right{margin-left:auto;display:flex;align-items:center;gap:8px;padding:8px 0;}
-
-/* BUTTONS */
+.logo-sub{font-size:11px;color:rgba(255,255,255,0.75);margin-top:2px;}
+.header-right{display:flex;gap:8px;align-items:center;}
+.search-box{background:rgba(255,255,255,0.2);border:1px solid rgba(255,255,255,0.35);border-radius:20px;padding:6px 14px 6px 12px;display:flex;align-items:center;gap:6px;}
+.search-box input{background:none;border:none;outline:none;font-family:'Noto Sans KR',sans-serif;font-size:13px;color:#fff;width:150px;}
+.search-box input::placeholder{color:rgba(255,255,255,0.6);}
+.icon-btn{background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.3);border-radius:var(--radius-sm);padding:6px 12px;font-size:12px;color:#fff;font-family:'Noto Sans KR',sans-serif;cursor:pointer;font-weight:600;}
+.icon-btn:hover{background:rgba(255,255,255,0.28);}
+.room-bar{display:flex;gap:6px;flex-wrap:wrap;padding-bottom:14px;}
+.room-chip{height:28px;padding:0 14px;border-radius:6px;border:1px solid rgba(255,255,255,0.4);background:rgba(255,255,255,0.18);color:#fff;font-family:'Noto Sans KR',sans-serif;font-size:12px;font-weight:600;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.room-chip:hover{background:rgba(255,255,255,0.3);}
+.room-chip.active{background:#fff;color:var(--pink);}
+.content{max-width:900px;margin:0 auto;padding:20px 20px 60px;}
+.tabs-row{display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap;}
+.tab-btn{display:flex;align-items:center;gap:6px;padding:8px 18px;border-radius:20px;font-family:'Noto Sans KR',sans-serif;font-size:13px;font-weight:700;color:var(--text3);cursor:pointer;border:1px solid var(--border);background:var(--surface);transition:all 0.15s;}
+.tab-btn:hover{border-color:var(--pink-mid);color:var(--pink);}
+.tab-btn.active{background:#1a0a10;color:#fff;border-color:#1a0a10;}
+.tabs-right{margin-left:auto;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 .btn{display:inline-flex;align-items:center;gap:5px;padding:7px 16px;border-radius:var(--radius-sm);font-family:'Noto Sans KR',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.15s;border:none;white-space:nowrap;}
-.btn:active{transform:scale(0.96);}
+.btn:active{transform:scale(0.97);}
 .btn-pink{background:var(--pink);color:#fff;}
 .btn-pink:hover{background:var(--pink-dim);}
 .btn-outline{background:var(--surface);color:var(--pink);border:1px solid var(--pink-border);}
@@ -53,45 +39,30 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .btn-ghost{background:var(--surface);color:var(--text2);border:1px solid var(--border);}
 .btn-ghost:hover{border-color:var(--pink-mid);color:var(--pink);}
 .btn-clear{background:none;border:none;color:var(--text3);font-size:12px;padding:4px 8px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;}
-.btn-clear:hover{color:var(--text2);}
-
-/* TOOLBAR */
-.toolbar{max-width:1280px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.toolbar{display:flex;align-items:center;margin-bottom:10px;}
 .total-label{font-size:13px;color:var(--text2);}
 .total-label b{color:var(--text);font-weight:700;}
-.sel-badge{font-size:12px;font-family:'IBM Plex Mono',monospace;color:var(--text3);margin-left:auto;}
+.sel-badge{font-size:12px;font-family:'IBM Plex Mono',monospace;color:var(--text3);margin-left:12px;}
 .sel-badge.on{color:var(--pink);font-weight:600;}
-
-/* CARD GRID */
-.grid-wrap{max-width:1280px;margin:0 auto;padding:4px 24px 48px;}
-.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
-
-/* CARD */
-.card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:6px;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s,transform 0.1s;position:relative;}
-.card:hover{border-color:var(--pink-mid);box-shadow:0 4px 16px rgba(232,96,138,0.1);transform:translateY(-1px);}
-.card.selected{border-color:var(--pink);background:var(--pink-light);box-shadow:0 0 0 1px var(--pink),0 4px 16px rgba(232,96,138,0.15);}
-.card-sel-mark{position:absolute;top:12px;right:52px;width:20px;height:20px;border-radius:50%;background:var(--pink);color:#fff;font-size:11px;font-weight:900;display:none;align-items:center;justify-content:center;}
-.card.selected .card-sel-mark{display:flex;}
-.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;}
-.card-name{font-size:15px;font-weight:800;color:var(--text);letter-spacing:-0.3px;}
-.card-badge{font-size:10px;font-weight:700;background:var(--pink);color:#fff;padding:3px 10px;border-radius:20px;flex-shrink:0;white-space:nowrap;}
-.card-time{font-size:12px;color:var(--text3);font-family:'IBM Plex Mono',monospace;}
-.card-dates{font-size:12px;color:var(--text2);}
-.card-teacher{font-size:12px;color:var(--text2);}
-.card-copy{width:100%;margin-top:6px;padding:9px;border:1px solid var(--pink-border);border-radius:var(--radius-sm);background:var(--pink-light);font-size:13px;color:var(--pink);font-weight:700;font-family:'Noto Sans KR',sans-serif;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:6px;}
-.card-copy:hover{background:var(--pink);color:#fff;border-color:var(--pink);}
-.card-copy.copied{background:#eafaf2;border-color:#86efac;color:#16a34a;}
-
-/* EMPTY */
-.empty{grid-column:1/-1;text-align:center;padding:64px 20px;color:var(--text3);}
+.list{display:flex;flex-direction:column;gap:8px;}
+.item{display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:13px 16px;cursor:pointer;transition:border-color 0.15s,box-shadow 0.15s;}
+.item:hover{border-color:var(--pink-mid);box-shadow:0 2px 10px rgba(232,96,138,0.08);}
+.item.selected{border-color:var(--pink);background:var(--pink-light);box-shadow:0 0 0 1px var(--pink);}
+.item-check{width:18px;height:18px;border:1.5px solid var(--pink-mid);border-radius:4px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all 0.15s;}
+.item.selected .item-check{background:var(--pink);border-color:var(--pink);}
+.item.selected .item-check::after{content:'✓';font-size:11px;color:#fff;font-weight:900;}
+.item-badge{font-size:11px;font-weight:700;background:var(--pink);color:#fff;padding:3px 10px;border-radius:6px;flex-shrink:0;white-space:nowrap;}
+.item-main{flex:1;min-width:0;}
+.item-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.item-info{font-size:12px;color:var(--text3);}
+.item-copy{flex-shrink:0;padding:6px 14px;border-radius:var(--radius-sm);background:var(--pink-light);border:1px solid var(--pink-border);color:var(--pink);font-size:12px;font-weight:700;font-family:'Noto Sans KR',sans-serif;cursor:pointer;transition:all 0.15s;white-space:nowrap;}
+.item-copy:hover{background:var(--pink);color:#fff;border-color:var(--pink);}
+.item-copy.copied{background:#eafaf2;border-color:#86efac;color:#16a34a;}
+.empty{text-align:center;padding:60px 20px;color:var(--text3);}
 .empty-icon{font-size:36px;margin-bottom:12px;display:block;}
 .empty-title{font-size:15px;color:var(--text2);font-weight:600;margin-bottom:6px;}
-
-/* TOAST */
 .toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(12px);background:var(--pink);color:#fff;padding:11px 24px;border-radius:30px;font-size:13px;font-weight:700;opacity:0;transition:all 0.22s;z-index:9999;pointer-events:none;white-space:nowrap;box-shadow:0 4px 20px rgba(232,96,138,0.35);}
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
-
-/* MODAL */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(26,10,16,0.45);z-index:500;align-items:center;justify-content:center;}
 .modal-bg.open{display:flex;}
 .modal{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);width:540px;max-width:95vw;max-height:85vh;overflow-y:auto;}
@@ -105,44 +76,32 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
 .modal-sec-title{font-size:11px;font-weight:700;color:var(--text3);text-transform:uppercase;letter-spacing:0.07em;margin-bottom:12px;padding-bottom:6px;border-bottom:1px solid var(--border);}
 .dc-row{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
 .dc-row label{font-size:13px;font-weight:700;min-width:76px;color:var(--text);}
-.dc-row input,.modal-field input{border:1px solid var(--border);border-radius:var(--radius-sm);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text2);height:32px;padding:0 10px;background:var(--bg);}
-.dc-row input{flex:1;}
-.dc-row input:focus,.modal-field input:focus{outline:none;border-color:var(--pink);}
+.dc-row input{flex:1;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--text2);height:30px;padding:0 10px;background:var(--bg);}
+.dc-row input:focus{outline:none;border-color:var(--pink);}
 .modal-field{margin-bottom:10px;}
 .modal-field label{font-size:13px;font-weight:600;display:block;margin-bottom:5px;color:var(--text);}
-.modal-field input{width:100%;font-family:'Noto Sans KR',sans-serif;font-size:13px;height:36px;}
-
-@media(max-width:700px){
-  .grid{grid-template-columns:1fr;}
-  .header-inner{flex-wrap:wrap;height:auto;padding:10px 0;gap:8px;}
-  .search-box input{width:120px;}
-  .grid-wrap{padding:4px 12px 40px;}
-  .toolbar{padding:10px 12px;}
-  .room-bar{padding:8px 12px;}
-  .tabs-inner{padding:0 12px;}
-}
+.modal-field input{width:100%;border:1px solid var(--border);border-radius:var(--radius-sm);font-family:'Noto Sans KR',sans-serif;font-size:13px;color:var(--text);height:36px;padding:0 12px;background:var(--bg);}
+.modal-field input:focus{outline:none;border-color:var(--pink);}
+@media(max-width:600px){.content{padding:14px 12px 50px;}.tabs-right{width:100%;justify-content:flex-end;}.search-box input{width:110px;}}
 </style>
 </head>
 <body>
 
-<header class="header">
-  <div class="header-inner">
+<div class="header">
+  <div class="header-top">
     <div>
       <div class="logo-title">SBS컴퓨터아트학원 안산점 — 개강안내</div>
       <div class="logo-sub">과목을 선택해 메시지를 복사하세요</div>
     </div>
-    <div style="display:flex;align-items:center;gap:8px;">
+    <div class="header-right">
       <div class="search-box">
-        <span style="color:rgba(255,255,255,0.75);font-size:13px;">🔍</span>
+        <span style="color:rgba(255,255,255,0.75);">🔍</span>
         <input type="text" id="search" placeholder="과목명 검색" oninput="applyFilters()">
       </div>
-      <button class="settings-btn" onclick="openModal()">⚙️ 설정</button>
+      <button class="icon-btn" onclick="openModal()">⚙️ 설정</button>
     </div>
   </div>
-</header>
-
-<div class="room-bar">
-  <div class="room-bar-inner">
+  <div class="room-bar">
     <button class="room-chip active" onclick="setRoom('')">전체</button>
     <button class="room-chip" onclick="setRoom('A강의장')">A강의장</button>
     <button class="room-chip" onclick="setRoom('B강의장')">B강의장</button>
@@ -155,26 +114,22 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
   </div>
 </div>
 
-<div class="tabs-wrap">
-  <div class="tabs-inner">
+<div class="content">
+  <div class="tabs-row">
     <button class="tab-btn active" onclick="setTab('weekday',this)">📅 5월 평일반</button>
     <button class="tab-btn" onclick="setTab('weekend',this)">🗓️ 5월 주말반</button>
-    <div class="tab-right">
+    <div class="tabs-right">
       <button class="btn btn-outline" id="multi-btn" onclick="toggleMulti()">☑️ 다중선택</button>
-      <button class="btn btn-pink" onclick="copyAll()">📋 전체 복사</button>
-      <button class="btn btn-ghost" id="sel-copy-btn" style="display:none" onclick="copySelected()">📋 선택 복사</button>
+      <button class="btn btn-pink" onclick="copyAll()">📋 전체복사</button>
+      <button class="btn btn-ghost" id="sel-copy-btn" style="display:none" onclick="copySelected()">📋 선택복사</button>
       <button class="btn-clear" id="clear-btn" style="display:none" onclick="clearSel()">✕ 해제</button>
     </div>
   </div>
-</div>
-
-<div class="toolbar">
-  <span class="total-label" id="total-label">총 <b>0</b>개 과목</span>
-  <span class="sel-badge" id="sel-badge">0개 선택됨</span>
-</div>
-
-<div class="grid-wrap">
-  <div class="grid" id="grid"></div>
+  <div class="toolbar">
+    <span class="total-label" id="total-label">총 <b>0</b>개 과목</span>
+    <span class="sel-badge" id="sel-badge">0개 선택됨</span>
+  </div>
+  <div class="list" id="list"></div>
 </div>
 
 <div class="modal-bg" id="modal-bg" onclick="closeModal(event)">
@@ -202,154 +157,58 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--bg);color:var(--text
     </div>
   </div>
 </div>
-
 <div class="toast" id="toast"></div>
 
 <script>
 const DISCORD={'A강의장':'https://discord.gg/UbPVxWgcct','B강의장':'https://discord.gg/VBaPncjxXe','C강의장':'https://discord.gg/2WcQwuzvxy','D강의장':'https://discord.gg/bHxVuv3AxS','E강의장':'https://discord.gg/AsV8M6P79c','F강의장':'https://discord.gg/cEDxpq6aVS','G강의장':'https://discord.gg/KrHJzzErWt','H강의장':'https://discord.gg/7x4cFMtgcn'};
-
 const DATA={
 weekday:[{"subject":"포토샵","teacher":"이정우강사","days":"월~목","startDate":"05.13","endDate":"06.10","timeStart":"09:00","timeEnd":"11:00","room":"A강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉","teacher":"위성혁강사","days":"월수금월수","startDate":"05.13","endDate":"06.08","timeStart":"09:00","timeEnd":"11:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"모션 디드","teacher":"위성혁강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"09:00","timeEnd":"11:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"스케치업1","teacher":"성유진강사","days":"월~목","startDate":"05.13","endDate":"06.10","timeStart":"09:00","timeEnd":"11:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"모션PO","teacher":"송지우강사","days":"월수금월수","startDate":"05.13","endDate":"06.08","timeStart":"09:00","timeEnd":"11:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"어드벤스 시포디2","teacher":"송지우강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"09:00","timeEnd":"11:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"AI에이전트1","teacher":"서재현강사","days":"화/목","startDate":"05.14","endDate":"06.09","timeStart":"09:00","timeEnd":"11:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"디일러","teacher":"이효근강사","days":"월~목","startDate":"05.13","endDate":"06.10","timeStart":"09:00","timeEnd":"11:00","room":"G강의장","supplies":"X","isOnline":"대면"},{"subject":"일러스트","teacher":"정희주강사","days":"월~목","startDate":"05.13","endDate":"06.10","timeStart":"11:00","timeEnd":"13:00","room":"A강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉","teacher":"위성혁강사","days":"월수금월수","startDate":"05.13","endDate":"06.08","timeStart":"11:00","timeEnd":"13:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉","teacher":"위성혁강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"11:00","timeEnd":"13:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"에펙1","teacher":"이정우강사","days":"월~목","startDate":"05.13","endDate":"06.10","timeStart":"11:00","timeEnd":"13:00","room":"C강의장","supplies":"X","isOnline":"대면"},{"subject":"캐드1","teacher":"성유진강사","days":"월~목","startDate":"05.13","endDate":"06.10","timeStart":"11:00","timeEnd":"13:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"프리미어심화","teacher":"이정우강사","days":"금","startDate":"05.15","endDate":"06.05","timeStart":"11:00","timeEnd":"13:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"웹PO","teacher":"서재현강사","days":"월~목","startDate":"04.20","endDate":"05.18","timeStart":"11:00","timeEnd":"13:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"웹PO","teacher":"서재현강사","days":"월~목","startDate":"05.19","endDate":"06.16","timeStart":"11:00","timeEnd":"13:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"포토웍스","teacher":"이효근강사","days":"월~목","startDate":"05.13","endDate":"06.10","timeStart":"11:00","timeEnd":"13:00","room":"G강의장","supplies":"X","isOnline":"대면"},{"subject":"컴퓨터 기초수업","teacher":"이효근강사","days":"금","startDate":"05.15","endDate":"06.05","timeStart":"11:00","timeEnd":"13:00","room":"G강의장","supplies":"X","isOnline":"대면"},{"subject":"실내건축 자격증(기능사)","teacher":"장수지강사","days":"월수금월수","startDate":"05.13","endDate":"06.08","timeStart":"11:00","timeEnd":"13:00","room":"H강의장","supplies":"X","isOnline":"대면"},{"subject":"실내건축 자격증(기사)","teacher":"장수지강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"11:00","timeEnd":"13:00","room":"H강의장","supplies":"X","isOnline":"대면"},{"subject":"모션그래픽(영상편집,CG) 제작과정","teacher":"송지우강사","days":"월~금","startDate":"03.26","endDate":"06.24","timeStart":"13:00","timeEnd":"18:00","room":"C강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉","teacher":"정희주강사","days":"월수금월수","startDate":"05.13","endDate":"06.08","timeStart":"14:00","timeEnd":"16:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉","teacher":"정희주강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"14:00","timeEnd":"16:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"AI프롬프트엔지니어링1","teacher":"","days":"/수","startDate":"05.13","endDate":"06.08","timeStart":"14:00","timeEnd":"16:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"마야1","teacher":"이주형강사","days":"월수금월수","startDate":"05.13","endDate":"06.08","timeStart":"14:00","timeEnd":"17:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"마야PO","teacher":"이주형강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"14:00","timeEnd":"17:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"인디자인2","teacher":"나지우강사","days":"월수금월수","startDate":"05.13","endDate":"06.10","timeStart":"14:00","timeEnd":"16:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"인포그래픽","teacher":"나지우강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"14:00","timeEnd":"16:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"편집PO","teacher":"","days":"수","startDate":"05.13","endDate":"06.10","timeStart":"16:00","timeEnd":"18:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"인테리어PO","teacher":"장수지강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"16:00","timeEnd":"18:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"2026년 미래유망(경일고)","teacher":"성유진강사","days":"수/목/금","startDate":"04.08","endDate":"10.08","timeStart":"16:00","timeEnd":"18:30","room":"G강의장","supplies":"X","isOnline":"대면"},{"subject":"AI크리에이터 인테리어","teacher":"","days":"/수","startDate":"05.13","endDate":"06.08","timeStart":"16:00","timeEnd":"18:00","room":"H강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉","teacher":"위성혁강사","days":"월수금월수","startDate":"05.13","endDate":"06.08","timeStart":"18:00","timeEnd":"20:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉","teacher":"위성혁강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"18:00","timeEnd":"20:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"시포디2","teacher":"","days":"수","startDate":"05.13","endDate":"06.08","timeStart":"19:00","timeEnd":"22:00","room":"A강의장","supplies":"X","isOnline":"대면"},{"subject":"모션PO","teacher":"","days":"금","startDate":"05.14","endDate":"06.09","timeStart":"19:00","timeEnd":"22:00","room":"A강의장","supplies":"X","isOnline":"대면"},{"subject":"마야6","teacher":"이주형강사","days":"월수금월수","startDate":"05.13","endDate":"06.08","timeStart":"19:00","timeEnd":"22:00","room":"C강의장","supplies":"X","isOnline":"대면"},{"subject":"프리미어","teacher":"","days":"금","startDate":"05.14","endDate":"06.09","timeStart":"19:00","timeEnd":"22:00","room":"C강의장","supplies":"X","isOnline":"대면"},{"subject":"백엔드마스터4(DB)","teacher":"서재현강사","days":"화목화목금","startDate":"04.21","endDate":"05.14","timeStart":"19:00","timeEnd":"22:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"캐드2","teacher":"","days":"수","startDate":"05.13","endDate":"06.08","timeStart":"19:00","timeEnd":"22:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"백엔드마스터5(JSP)","teacher":"","days":"금","startDate":"05.19","endDate":"06.09","timeStart":"19:00","timeEnd":"22:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"포토샵","teacher":"","days":"수","startDate":"05.13","endDate":"06.08","timeStart":"19:00","timeEnd":"22:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"맥스1","teacher":"","days":"금","startDate":"05.14","endDate":"06.09","timeStart":"19:00","timeEnd":"22:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"웹1","teacher":"서재현강사","days":"월수금월수","startDate":"04.20","endDate":"05.15","timeStart":"19:00","timeEnd":"22:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"마야PO","teacher":"","days":"금","startDate":"05.14","endDate":"06.09","timeStart":"19:00","timeEnd":"22:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"웹2","teacher":"","days":"수","startDate":"05.18","endDate":"06.12","timeStart":"19:00","timeEnd":"22:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"컴활","teacher":"","days":"수","startDate":"05.13","endDate":"06.08","timeStart":"19:00","timeEnd":"22:00","room":"G강의장","supplies":"X","isOnline":"대면"},{"subject":"디일러","teacher":"","days":"금","startDate":"05.14","endDate":"06.09","timeStart":"19:00","timeEnd":"22:00","room":"G강의장","supplies":"X","isOnline":"대면"},{"subject":"실내건축 자격증(기능사)","teacher":"","days":"수","startDate":"05.13","endDate":"06.08","timeStart":"19:00","timeEnd":"22:00","room":"H강의장","supplies":"X","isOnline":"대면"},{"subject":"실내건축 자격증(기사)","teacher":"","days":"금","startDate":"05.14","endDate":"06.09","timeStart":"19:00","timeEnd":"22:00","room":"H강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉","teacher":"정희주강사","days":"월수금월수","startDate":"05.13","endDate":"06.08","timeStart":"20:00","timeEnd":"22:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉","teacher":"정희주강사","days":"화목화목금","startDate":"05.14","endDate":"06.09","timeStart":"20:00","timeEnd":"22:00","room":"B강의장","supplies":"X","isOnline":"대면"}],
 weekend:[{"subject":"디지털드로잉/주","teacher":"정희주강사","days":"토/일","startDate":"05.16","endDate":"06.07","timeStart":"09:00","timeEnd":"12:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"GTQ/주","teacher":"","days":"/일","startDate":"06.06","endDate":"06.28","timeStart":"09:00","timeEnd":"12:00","room":"C강의장","supplies":"X","isOnline":"대면"},{"subject":"파이썬2/주","teacher":"서재현강사","days":"토/일","startDate":"04.25","endDate":"05.17","timeStart":"09:00","timeEnd":"12:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"C언어1/주","teacher":"","days":"/일","startDate":"05.23","endDate":"06.14","timeStart":"09:00","timeEnd":"12:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"유크리입문","teacher":"이지유강사","days":"토/일","startDate":"05.16","endDate":"06.07","timeStart":"09:00","timeEnd":"12:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"전산응용기계제도/6주","teacher":"장수지강사","days":"토/일","startDate":"04.18","endDate":"05.24","timeStart":"09:00","timeEnd":"13:00","room":"G강의장","supplies":"X","isOnline":"대면"},{"subject":"포토샵/주","teacher":"나지우강사","days":"토/일","startDate":"05.16","endDate":"06.07","timeStart":"12:00","timeEnd":"15:00","room":"A강의장","supplies":"X","isOnline":"대면"},{"subject":"디지털드로잉/주","teacher":"정희주강사","days":"토/일","startDate":"05.16","endDate":"06.07","timeStart":"12:00","timeEnd":"15:00","room":"B강의장","supplies":"X","isOnline":"대면"},{"subject":"모스/주","teacher":"","days":"/일","startDate":"05.16","endDate":"06.07","timeStart":"12:00","timeEnd":"15:00","room":"C강의장","supplies":"X","isOnline":"대면"},{"subject":"스케치업1/주","teacher":"","days":"/일","startDate":"05.16","endDate":"06.07","timeStart":"12:00","timeEnd":"15:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"유크리기초","teacher":"이지유강사","days":"토/일","startDate":"05.16","endDate":"06.07","timeStart":"12:00","timeEnd":"15:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"전산회계1급/주","teacher":"양윤석강사","days":"토/일","startDate":"04.04","endDate":"05.31","timeStart":"12:00","timeEnd":"15:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"전산회계1급/주","teacher":"","days":"/일","startDate":"06.06","endDate":"07.26","timeStart":"12:00","timeEnd":"15:00","room":"F강의장","supplies":"X","isOnline":"대면"},{"subject":"전산응용건축제도/주","teacher":"성유진강사","days":"토/일","startDate":"05.02","endDate":"05.24","timeStart":"13:00","timeEnd":"17:00","room":"G강의장","supplies":"X","isOnline":"대면"},{"subject":"디일러/주","teacher":"정희주강사","days":"토/일","startDate":"05.16","endDate":"06.07","timeStart":"15:00","timeEnd":"18:00","room":"A강의장","supplies":"X","isOnline":"대면"},{"subject":"실전OA1","teacher":"이효근강사","days":"토/일","startDate":"05.09","endDate":"05.31","timeStart":"15:00","timeEnd":"18:00","room":"C강의장","supplies":"X","isOnline":"대면"},{"subject":"실전OA2","teacher":"이효근강사","days":"토/일","startDate":"06.06","endDate":"06.28","timeStart":"15:00","timeEnd":"18:00","room":"C강의장","supplies":"X","isOnline":"대면"},{"subject":"그래픽스운용기능사/주","teacher":"나지우강사","days":"토/일","startDate":"05.02","endDate":"05.24","timeStart":"15:00","timeEnd":"18:00","room":"D강의장","supplies":"X","isOnline":"대면"},{"subject":"캐드1/주","teacher":"","days":"/일","startDate":"05.16","endDate":"06.07","timeStart":"15:00","timeEnd":"18:00","room":"E강의장","supplies":"X","isOnline":"대면"},{"subject":"전산세무2급","teacher":"","days":"/일","startDate":"06.06","endDate":"07.26","timeStart":"15:00","timeEnd":"18:00","room":"F강의장","supplies":"X","isOnline":"대면"}]
 };
 
 let activeTab='weekday',activeRoom='',multiMode=false,selected=new Set();
-
 function init(){initDcList();applyFilters();}
-
-function setTab(tab,btn){
-  activeTab=tab;selected.clear();
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
-  applyFilters();
-}
-
-function setRoom(room){
-  activeRoom=room;
-  document.querySelectorAll('.room-chip').forEach(b=>b.classList.toggle('active',b.textContent.trim()===(room||'전체')));
-  applyFilters();
-}
-
+function setTab(tab,btn){activeTab=tab;selected.clear();document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');applyFilters();}
+function setRoom(room){activeRoom=room;document.querySelectorAll('.room-chip').forEach(b=>b.classList.toggle('active',b.textContent.trim()===(room||'전체')));applyFilters();}
 function applyFilters(){
   const q=document.getElementById('search').value.toLowerCase();
-  const filtered=DATA[activeTab].filter(c=>{
-    if(activeRoom&&c.room!==activeRoom)return false;
-    if(q&&!c.subject.toLowerCase().includes(q))return false;
-    return true;
-  });
-  document.getElementById('total-label').innerHTML=`총 <b>${filtered.length}</b>개 과목`;
-  renderGrid(filtered);
-  updateSelUI();
+  const f=DATA[activeTab].filter(c=>{if(activeRoom&&c.room!==activeRoom)return false;if(q&&!c.subject.toLowerCase().includes(q))return false;return true;});
+  document.getElementById('total-label').innerHTML=`총 <b>${f.length}</b>개 과목`;
+  renderList(f);updateSelUI();
 }
-
 function key(c){return c.subject+c.timeStart+c.room+c.startDate;}
-
-function renderGrid(courses){
-  const el=document.getElementById('grid');
-  if(!courses.length){
-    el.innerHTML=`<div class="empty"><span class="empty-icon">🔍</span><div class="empty-title">강좌가 없습니다</div><div>검색 조건을 바꿔보세요.</div></div>`;
-    return;
-  }
+function renderList(courses){
+  const el=document.getElementById('list');
+  if(!courses.length){el.innerHTML=`<div class="empty"><span class="empty-icon">🔍</span><div class="empty-title">강좌가 없습니다</div><div>검색 조건을 바꿔보세요.</div></div>`;return;}
   el.innerHTML=courses.map((c,i)=>{
     const sel=selected.has(key(c));
     const cd=JSON.stringify(c).replace(/"/g,'&quot;');
-    return `<div class="card${sel?' selected':''}" id="card${i}" onclick="onCardClick('${key(c).replace(/'/g,"\\'")}',event)">
-      <div class="card-sel-mark">✓</div>
-      <div class="card-top">
-        <span class="card-name">${c.subject}</span>
-        <span class="card-badge">${c.room}</span>
+    const info=[c.days,`${c.timeStart}~${c.timeEnd}`,`${c.startDate}~${c.endDate}`,c.teacher].filter(Boolean).join(' | ');
+    return `<div class="item${sel?' selected':''}" onclick="onItemClick('${key(c).replace(/'/g,"\\'")}',event)">
+      <div class="item-check"></div>
+      <div class="item-badge">${c.room}</div>
+      <div class="item-main">
+        <div class="item-name">${c.subject}</div>
+        <div class="item-info">${info}</div>
       </div>
-      <div class="card-time">${c.days} &nbsp;|&nbsp; ${c.timeStart}~${c.timeEnd}</div>
-      <div class="card-dates">개강 ${c.startDate} · 종강 ${c.endDate}</div>
-      ${c.teacher?`<div class="card-teacher">${c.teacher}</div>`:''}
-      <button class="card-copy" id="cp${i}" onclick="copyCard(event,${cd},${i})">📋 복사하기</button>
+      <button class="item-copy" id="cp${i}" onclick="copyItem(event,${cd},${i})">📋 복사</button>
     </div>`;
   }).join('');
 }
-
-function onCardClick(k,e){
-  if(!multiMode)return;
-  if(selected.has(k))selected.delete(k);else selected.add(k);
-  applyFilters();
-}
-
-function toggleMulti(){
-  multiMode=!multiMode;
-  document.getElementById('multi-btn').classList.toggle('on',multiMode);
-  if(!multiMode)selected.clear();
-  document.getElementById('sel-copy-btn').style.display=multiMode?'':'none';
-  document.getElementById('clear-btn').style.display=multiMode?'':'none';
-  applyFilters();
-}
-
+function onItemClick(k,e){if(!multiMode)return;if(selected.has(k))selected.delete(k);else selected.add(k);applyFilters();}
+function toggleMulti(){multiMode=!multiMode;document.getElementById('multi-btn').classList.toggle('on',multiMode);if(!multiMode)selected.clear();document.getElementById('sel-copy-btn').style.display=multiMode?'':'none';document.getElementById('clear-btn').style.display=multiMode?'':'none';applyFilters();}
 function clearSel(){selected.clear();applyFilters();}
-
-function updateSelUI(){
-  const b=document.getElementById('sel-badge');
-  b.textContent=selected.size+'개 선택됨';
-  b.classList.toggle('on',selected.size>0);
-}
-
+function updateSelUI(){const b=document.getElementById('sel-badge');b.textContent=selected.size+'개 선택됨';b.classList.toggle('on',selected.size>0);}
 function dc(room){const el=document.getElementById('dc-'+room);return el?el.value:(DISCORD[room]||'');}
-
-function block(c){
-  return `*과목명: ${c.subject}
-*개강일: ${c.startDate}
-*종강일: ${c.endDate}
-*수업시간: ${c.timeStart}~${c.timeEnd}
-*강의장 : ${c.room}
-*수업: ${c.days}
-*준비물 : ${c.supplies}
-*비대면유/무 : ${c.isOnline}
-*강사님 : ${c.teacher}
-${c.room}  ${dc(c.room)}`;}
-
-function wrap(blocks){
-  const url=document.getElementById('gs-url').value;
-  const notice=document.getElementById('notice-text').value;
-  return `★ SBS 아카데미개강안내 ★\n\n${blocks.join('\n\n')}\n\n★수강생 필독!!★\n                  \n${url}\n\n${notice}`;}
-
-function copyCard(e,c,i){
-  e.stopPropagation();
-  navigator.clipboard.writeText(wrap([block(c)])).then(()=>{
-    const btn=document.getElementById('cp'+i);
-    if(btn){btn.classList.add('copied');btn.textContent='✓ 복사됨';setTimeout(()=>{btn.classList.remove('copied');btn.textContent='📋 복사하기';},1800);}
-    toast('✅ 복사되었습니다!');
-  });
-}
-
-function copyAll(){
-  const q=document.getElementById('search').value.toLowerCase();
-  const filtered=DATA[activeTab].filter(c=>{
-    if(activeRoom&&c.room!==activeRoom)return false;
-    if(q&&!c.subject.toLowerCase().includes(q))return false;
-    return true;
-  });
-  if(!filtered.length){toast('강좌가 없습니다.');return;}
-  navigator.clipboard.writeText(wrap(filtered.map(block))).then(()=>toast(`✅ 전체 ${filtered.length}개 복사 완료!`));
-}
-
-function copySelected(){
-  const toGen=DATA[activeTab].filter(c=>selected.has(key(c)));
-  if(!toGen.length){toast('선택된 강좌가 없습니다.');return;}
-  navigator.clipboard.writeText(wrap(toGen.map(block))).then(()=>toast(`✅ ${toGen.length}개 선택 복사 완료!`));
-}
-
-function toast(msg){
-  const el=document.getElementById('toast');
-  el.textContent=msg;el.classList.add('show');
-  clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),2200);
-}
-
-function initDcList(){
-  document.getElementById('dc-list').innerHTML=Object.entries(DISCORD).map(([r,u])=>
-    `<div class="dc-row"><label>${r}</label><input type="text" id="dc-${r}" value="${u}"></div>`
-  ).join('');
-}
-
+function block(c){return `*과목명: ${c.subject}\n*개강일: ${c.startDate}\n*종강일: ${c.endDate}\n*수업시간: ${c.timeStart}~${c.timeEnd}\n*강의장 : ${c.room}\n*수업: ${c.days}\n*준비물 : ${c.supplies}\n*비대면유/무 : ${c.isOnline}\n*강사님 : ${c.teacher}\n${c.room}  ${dc(c.room)}`;}
+function wrap(blocks){const url=document.getElementById('gs-url').value;const notice=document.getElementById('notice-text').value;return `★ SBS 아카데미개강안내 ★\n\n${blocks.join('\n\n')}\n\n★수강생 필독!!★\n                  \n${url}\n\n${notice}`;}
+function copyItem(e,c,i){e.stopPropagation();navigator.clipboard.writeText(wrap([block(c)])).then(()=>{const btn=document.getElementById('cp'+i);if(btn){btn.classList.add('copied');btn.textContent='✓ 복사됨';setTimeout(()=>{btn.classList.remove('copied');btn.textContent='📋 복사';},1800);}toast('✅ 복사되었습니다!');});}
+function copyAll(){const q=document.getElementById('search').value.toLowerCase();const f=DATA[activeTab].filter(c=>{if(activeRoom&&c.room!==activeRoom)return false;if(q&&!c.subject.toLowerCase().includes(q))return false;return true;});if(!f.length){toast('강좌가 없습니다.');return;}navigator.clipboard.writeText(wrap(f.map(block))).then(()=>toast(`✅ 전체 ${f.length}개 복사 완료!`));}
+function copySelected(){const t=DATA[activeTab].filter(c=>selected.has(key(c)));if(!t.length){toast('선택된 강좌가 없습니다.');return;}navigator.clipboard.writeText(wrap(t.map(block))).then(()=>toast(`✅ ${t.length}개 선택 복사 완료!`));}
+function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(()=>el.classList.remove('show'),2200);}
+function initDcList(){document.getElementById('dc-list').innerHTML=Object.entries(DISCORD).map(([r,u])=>`<div class="dc-row"><label>${r}</label><input type="text" id="dc-${r}" value="${u}"></div>`).join('');}
 function openModal(){document.getElementById('modal-bg').classList.add('open');}
 function closeModal(e){if(!e||e.target===document.getElementById('modal-bg'))document.getElementById('modal-bg').classList.remove('open');}
-
 init();
 </script>
 </body>
